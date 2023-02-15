@@ -34,26 +34,13 @@ stages:
            projects: 'DotnetTemplate.sln'
            feedsToUse: 'select'
            configuration: Release
-      - task: DotNetCoreCLI@2
-        displayName: Dotnet build
+      - task: MSBuild@1
+        displayName: Build Dotnet
         inputs:
-          command: 'build'
-          projects: 'DotnetTemplate.sln'
-          workingDirectory: 'DotnetTemplate'
-          configuration: Release
-      - task: DotNetCoreCLI@2
-        displayName: Dotnet run
-        inputs:
-          command: 'run'
-          projects: 'DotnetTemplate/DotnetTemplate.sln'
-          configuration: Release
+          solution: 'DotnetTemplate.sln'
+          platform: 'Any CPU'
+          configuration: 'Release'
 
-      - task: DotNetCoreCLI@2
-        displayName: Dotnet test
-        inputs:
-          command: 'test'
-          projects: 'DotnetTemplate.sln'
-          configuration: Release
       - task: PublishBuildArtifacts@1
         displayName: Build artifact
         inputs:
