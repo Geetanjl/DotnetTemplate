@@ -22,6 +22,11 @@ stages:
       #name: 'VSC'
       vmImage: 'windows-latest'
     steps:
+      - task: UseDotNet@2
+        inputs:
+          packageType: 'sdk'
+          version: '6.x'
+
       -  task: DotNetCoreCLI@2
          displayName: Dotnet restore
          inputs:
