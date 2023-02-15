@@ -31,7 +31,7 @@ stages:
          displayName: Dotnet restore
          inputs:
            command: 'restore'
-           projects: 'DotnetTemplate/DotnetTemplate.sln'
+           projects: 'DotnetTemplate.sln'
            feedsToUse: 'select'
            configuration: Release
       - task: DotNetCoreCLI@2
