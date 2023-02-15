@@ -40,6 +40,13 @@ stages:
           command: 'build'
           projects: 'DotnetTemplate.sln'
           workingDirectory: 'DotnetTemplate'
+          configuration: Release
+      - task: DotNetCoreCLI@2
+        displayName: Dotnet run
+        inputs:
+          command: 'run'
+          projects: 'DotnetTemplate.sln'
+          configuration: Release
 
       - task: DotNetCoreCLI@2
         displayName: Dotnet test
