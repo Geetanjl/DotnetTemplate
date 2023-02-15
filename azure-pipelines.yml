@@ -35,11 +35,11 @@ stages:
            feedsToUse: 'select'
            configuration: Release
       - task: DotNetCoreCLI@2
-        displayName: Dotnet run and build
+        displayName: Dotnet build
         inputs:
-          command: 'custom'
+          command: 'build'
           projects: 'DotnetTemplate.sln'
-          custom: 'build run'
+          workingDirectory: 'DotnetTemplate'
 
       - task: DotNetCoreCLI@2
         displayName: Dotnet test
