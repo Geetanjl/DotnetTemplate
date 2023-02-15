@@ -45,7 +45,7 @@ stages:
         displayName: Dotnet run
         inputs:
           command: 'run'
-          projects: 'DotnetTemplate.sln'
+          projects: 'DotnetTemplate'
           configuration: Release
 
       - task: DotNetCoreCLI@2
