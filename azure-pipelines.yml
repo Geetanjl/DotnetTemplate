@@ -38,19 +38,19 @@ stages:
         displayName: Dotnet run
         inputs:
           command: 'run'
-          projects: 'DotnetTemplate/DotnetTemplate.sln'
+          projects: 'DotnetTemplate.sln'
       - task: DotNetCoreCLI@2
         displayName: Dotnet build
         inputs:
           command: 'build'
-          projects: 'DotnetTemplate/DotnetTemplate.sln'
+          projects: 'DotnetTemplate.sln'
           workingDirectory: 'DotnetTemplate'
 
       - task: DotNetCoreCLI@2
         displayName: Dotnet test
         inputs:
           command: 'test'
-          projects: 'DotnetTemplate/DotnetTemplate.sln'
+          projects: 'DotnetTemplate.sln'
           configuration: Release
       - task: PublishBuildArtifacts@1
         displayName: Build artifact
