@@ -41,5 +41,5 @@ stages:
         displayName: Build artifact
         inputs:
           PathtoPublish: '$(Build.ArtifactStagingDirectory)'
-          ArtifactName: 'Backend'
+          ArtifactName: 'drop'
           publishLocation: 'Container'
